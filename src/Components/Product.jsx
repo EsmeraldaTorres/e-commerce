@@ -17,7 +17,7 @@ const Product = ({ name, description, price, id, imagen, status })=>{
       id,
       imagen
     });
-  }, []);
+  }, [name, description, price, id, imagen, ]);
 
   const handleDispatch = payload => {
     dispatch({ type: "ADD_TO_CART", payload });

@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
-import {Container, Nav, Navbar} from "react-bootstrap";
 import CartContext from "../Context/CartContext";
 import kiplingLogo from "../assets/kiplingLogo.png"
 import "./Header.styles.css"
@@ -9,9 +8,7 @@ import  "./bootstrap.min.css.map"
 
 const Header = ()=>{
   const { state } = useContext(CartContext);
-  const [menu,setMenu] = useState(false)
-
-  console.log(state)
+  const [setMenu] = useState(false)
   const showMenu = ()=>{
     setMenu(true)
   }
@@ -45,9 +42,6 @@ const Header = ()=>{
           <li class="nav-item">
             <Link to="/cart" className="nav-link" >cart: {state?.cart?.length}</Link>
           </li>
-          {/* <li class="nav-item">
-            <Link to="/" className="nav-link" href="#">Price: ${state.totalPrice}</Link>
-          </li> */}
           <li class="nav-item">
             <Link to="/" className="nav-link" href="#">My count</Link>
           </li>

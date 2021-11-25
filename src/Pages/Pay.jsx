@@ -1,6 +1,4 @@
 import React,{useContext} from "react";
-import {Link} from "react-router-dom";
-// import CartContext from "../Context/CartContext";
 import PayContext from "../Context/PayContext";
 import {Table} from "react-bootstrap";
 import TablePay from "../Components/TablePay";
@@ -8,10 +6,9 @@ import "../Components/TablePay.styles.css"
 import PayMethod from "../Components/PayMethod"
 
 const Pay= ()=>{
-    // const { state, dispatch } = useContext(CartContext);
-    const {state, dispatch} = useContext(PayContext)
-    console.log("PAYCONTEXT STATE")
-    console.log(state)
+    const {state} = useContext(PayContext)
+    // console.log("PAYCONTEXT STATE")
+    // console.log(state)
     return (
       <>
         <div className="container content">

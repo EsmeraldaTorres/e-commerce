@@ -9,8 +9,8 @@ import TableCart from "../Components/TableCart";
 
 
 const Cart = ()=>{
-const { state, dispatch } = useContext(CartContext);
-const { state: statePay, dispatch: dispatchPay } = useContext(PayContext);
+const { state } = useContext(CartContext);
+const { state: statePay} = useContext(PayContext);
 console.log("cart:")
 console.log(state?.cart)
 console.log("state:")

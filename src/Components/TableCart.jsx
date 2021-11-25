@@ -7,8 +7,8 @@ import "../Components/TableCart.styles.css"
 
 const TableCart = ({name, id,imagen, price, quantity})=>{
   
-  const { state,dispatch: dispatchCart } = useContext(CartContext);
-  const { state: statePay,dispatch: dispatchPay } = useContext(PayContext);
+  const { dispatch: dispatchCart } = useContext(CartContext);
+  const { dispatch: dispatchPay } = useContext(PayContext);
   const [checkedState, setCheckedState] = useState(false)
 
   const handleCheckbox = ()=>{

@@ -1,9 +1,5 @@
-import React,{useContext, useState} from "react";
-
-import CartContext from "../Context/CartContext";
-
+import React from "react";
 const TablePay = ({name,price, quantity})=>{
-  const { state,dispatch } = useContext(CartContext);
     return(
     <>
     <tr>
