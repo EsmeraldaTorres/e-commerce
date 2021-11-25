@@ -1,0 +1,26 @@
+.logo{
+ max-width: 100px;
+}
+
+.marginR{
+    margin-right: 1rem;
+}
+.br-left{
+    border-top-left-radius: .25rem ;
+    border-bottom-left-radius: .25rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
+.br-rigth{
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-top-left-radius: 0rem ;
+    border-bottom-left-radius: 0rem;
+    border-color: grey;
+}
+
+@media (min-width: 990px) {
+.dis-none{
+display: none;
+} 
+}
