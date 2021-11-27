@@ -1,7 +1,9 @@
 import React,{useContext, useState} from "react";
 
+// Context
 import CartContext from "../Context/CartContext";
 import PayContext from "../Context/PayContext";
+// Styles
 import Button from "@restart/ui/esm/Button";
 import "../Components/TableCart.styles.css"
 
@@ -24,15 +26,15 @@ const TableCart = ({name, id,imagen, price, quantity})=>{
       payload:{totalPrice:totalProductPrice,id}})
     }
   }
-    return(
-    <>
-    <tr>
-    <td>{id}</td>
-    <td>{name}</td>
-    <td><img src={`http://localhost:1337${imagen}`} className="imagen-product" alt="product" /></td>
-    <td>${price}</td> 
-      <td className="text-center d-flex">
-      {
+  return(
+  <>
+  <tr>
+  <td>{id}</td>
+  <td>{name}</td>
+  <td><img src={imagen} className="imagen-product" alt="product" /></td>
+  <td>${price}</td> 
+  <td className="text-center d-flex">
+    {
       quantity === 1 ? 
       <div>
       <Button
@@ -44,13 +46,13 @@ const TableCart = ({name, id,imagen, price, quantity})=>{
               id: id,
               price:price
             }
-        })
-      }
+          })
+        }
       >
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-        </svg>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/> 
+      </svg>
       </Button>
       <p>{quantity}</p>
       <Button
@@ -110,20 +112,20 @@ const TableCart = ({name, id,imagen, price, quantity})=>{
       </svg>
       </Button>
       </div> 
-        }
-      </td>
-      <td>
-      <div class="input-group mb-3">
-        <input onChange={handleCheckbox} value={quantity} type="checkbox" 
-        checked={checkedState} aria-label="Checkbox for following text input"/>
-      </div>
-      </td>
-      <td>
-        $ {price * quantity}
-      </td>
-    </tr>
-    </>
-    )
+    }
+  </td>
+  <td>
+    <div class="input-group mb-3">
+      <input onChange={handleCheckbox} value={quantity} type="checkbox" 
+      checked={checkedState} aria-label="Checkbox for following text input"/>
+    </div>
+  </td>
+  <td>
+    $ {price * quantity}
+  </td>
+  </tr>
+  </>
+  )
 }
 
 export default TableCart

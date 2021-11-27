@@ -15,32 +15,30 @@ import Pay from "./Pages/Pay"
 const App = () => {
   return (
     <>
-        <ProductListProvider>
-          <CartProvider>
-            <PayProvider>
-            <Router>
-              <Header/>
-                <Switch>
-                  <Route path="/" exact>
-                      <Home />
-                  </Route>
-                </Switch>
-
-                <Switch>
-                  <Route path="/cart" exact>
-                      <Cart />
-                  </Route>
-                </Switch>
-
-                <Switch>
-                  <Route path="/pay" exact>
-                      <Pay />
-                  </Route>
-                </Switch>
-            </Router>
-            </PayProvider>
-            </CartProvider>
-        </ProductListProvider>
+    <ProductListProvider>
+      <CartProvider>
+        <PayProvider>
+        <Router>
+          <Header/>
+            <Switch>
+              <Route path="/" exact>
+                <Home/>
+              </Route>
+            </Switch>
+            <Switch>
+              <Route path="/cart" exact>
+                <Cart/>
+              </Route>
+            </Switch>
+            <Switch>
+              <Route path="/pay" exact>
+                <Pay/>
+              </Route>
+            </Switch>
+        </Router>
+        </PayProvider>
+      </CartProvider>
+    </ProductListProvider>
     </>
   );
 };

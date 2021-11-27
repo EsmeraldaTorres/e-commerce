@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
-// import { ListGroup } from "react-bootstrap";
 
-// import Button from 'react-bootstrap/Button';
 import ProductListContext from "../Context/ProductListContext";
-// import Header from "../Custom/Header";
 import Product from "../Components/Product";
 
 const Home = ()=>{
@@ -26,7 +23,7 @@ const Home = ()=>{
                         description={product.desc}
                         price={product.price}
                         id={product.id}
-                        imagen={product.img[0]}
+                        imagen={product.img}
                         status="add"
                         />
                     )

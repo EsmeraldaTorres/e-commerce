@@ -13,8 +13,6 @@ const { state } = useContext(CartContext);
 const { state: statePay} = useContext(PayContext);
 console.log("cart:")
 console.log(state?.cart)
-console.log("state:")
-console.log(state)
 
     return (
       <>
@@ -41,7 +39,7 @@ console.log(state)
             description={item.description}
             price={item.price}
             quantity={item.quantity}
-            imagen={item.imagen.url}
+            imagen={item.imagen}
             /> 
              ))} 
             <tr>
@@ -68,12 +66,3 @@ console.log(state)
 }
 
 export default Cart
-
-
-// import React from "react";
-
-// const Cart = ()=>{
-//     return ()
-// }
-
-// export default Cart
